@@ -31,12 +31,35 @@ public class WordManager {
     public void start() {
         while(true) {
             int menu = selectMenu();
-            if(menu == 0) break;
-            else if(menu==4) {
+            //종료
+            if(menu==0) break;
+            //추가
+            if(menu==4) {
                 wordCRUD.addWord();
             }
+            //확인
             else if(menu==1) {
                 wordCRUD.listAll();
+            }
+            //수정
+            else if(menu==5) {
+                wordCRUD.updateItem();
+            }
+            //삭제
+            else if(menu==6) {
+                wordCRUD.deleteItem();
+            }
+            //파일 저장
+            else if(menu==7) {
+                wordCRUD.saveFile();
+            }
+            //레벨 검색
+            else if(menu==2) {
+                wordCRUD.searchLevel();
+            }
+            //검색
+            else if(menu==3) {
+                wordCRUD.searchWord();
             }
         }
     }
