@@ -132,7 +132,7 @@ public class WordCRUD implements ICRUD{
                 line = br.readLine();
                 if(line == null)break;
 
-                String[] data = line.split("|");
+                String[] data = line.split("-");
                 int level = Integer.parseInt(data[0]);
                 String word = data[1];
                 String meaning = data[2];
@@ -151,7 +151,7 @@ public class WordCRUD implements ICRUD{
         try {
             PrintWriter pr = new PrintWriter(new FileWriter("Dictionary.txt"));
             for(Word one : list) {
-                pr.write(one.toString()+ "\n");
+                pr.write(one.toFileString()+ "\n");
             }
 
             pr.close();
