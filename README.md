@@ -2,11 +2,8 @@
 
 ### 실행화면
 
-###### 단어 불러오기
+###### 단어 불러오기 & 1. 모든 단어 보기
 <img src = "screenshots/fileLoad.png"/>
-
-###### 1. 모든 단어 보기
-<img src = "screenshots/menu1.png"/>
 
 ###### 2. 수준별 단어 보기
 <img src = "screenshots/menu2.png"/>
