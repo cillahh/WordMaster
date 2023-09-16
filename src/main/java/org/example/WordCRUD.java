@@ -90,7 +90,7 @@ public class WordCRUD implements ICRUD{
 
 
 
-    public void updateItem() {
+    public void updateWord() {
         System.out.print("=> 수정할 단어 검색 : ");
         String keyword = s.next();
         ArrayList<Integer> idlist = this.listAll(keyword);
@@ -104,7 +104,7 @@ public class WordCRUD implements ICRUD{
         System.out.print("단어가 수정되었습니다.");
     }
 
-    public void deleteItem() {
+    public void deleteWord() {
         System.out.print("=> 삭제할 단어 검색 : ");
         String keyword = s.next();
         ArrayList<Integer> idlist = this.listAll(keyword);
@@ -132,7 +132,7 @@ public class WordCRUD implements ICRUD{
                 line = br.readLine();
                 if(line == null)break;
 
-                String[] data = line.split("-");
+                String[] data = line.split("|");
                 int level = Integer.parseInt(data[0]);
                 String word = data[1];
                 String meaning = data[2];
@@ -151,7 +151,7 @@ public class WordCRUD implements ICRUD{
         try {
             PrintWriter pr = new PrintWriter(new FileWriter("Dictionary.txt"));
             for(Word one : list) {
-                pr.write(one.toFileString() + "\n");
+                pr.write(one.toString()+ "\n");
             }
 
             pr.close();

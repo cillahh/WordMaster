@@ -29,6 +29,7 @@ public class WordManager {
     }
 
     public void start() {
+        wordCRUD.loadFile();
         while(true) {
             int menu = selectMenu();
             //종료
@@ -43,11 +44,11 @@ public class WordManager {
             }
             //수정
             else if(menu==5) {
-                wordCRUD.updateItem();
+                wordCRUD.updateWord();
             }
             //삭제
             else if(menu==6) {
-                wordCRUD.deleteItem();
+                wordCRUD.deleteWord();
             }
             //파일 저장
             else if(menu==7) {
@@ -62,5 +63,6 @@ public class WordManager {
                 wordCRUD.searchWord();
             }
         }
+        System.out.println("\n프로그램 종료!");
     }
 }
